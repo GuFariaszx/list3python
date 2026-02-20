@@ -1,13 +1,13 @@
 saldo_inicial = 1000.0
 checkpoint = saldo_inicial
 
-print("Checkpoint aponta para o mesmo objeto do saldo_inicial?", saldo_inicial is checkpoint)
+print("Checkpoint aponta para o mesmo objeto do saldo inicial?", saldo_inicial is checkpoint)
 
 while True:
     auditor = str(input("Digite o nome do auditor: "))
 
-    if "*" in auditor or "#" in auditor:
-        print("Nome inválido! Não use * ou #")
+    if "!" in auditor or "@" in auditor or "*" in auditor or "#" in auditor or "%" in auditor or "$" in auditor:
+        print("Nome inválido! Não use caracteres especiais! Tente Novamente!")
     else:
         break
 
@@ -32,4 +32,5 @@ print("Auditor:", auditor)
 print("Saldo final:", saldo_final)
 
 print("Saldo final é o mesmo objeto do checkpoint?", saldo_final is checkpoint)
+print("A razão por trás disso é que o checpoint salva o valor inicial das transações, portanto para novas transações o chepoint retorna")
 
